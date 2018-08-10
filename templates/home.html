@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<table align="right"><tr>
+    <td><h3 align="right"><font color="blue"> {{name}}</font></h3></td><td>&nbsp;&nbsp;<a href="/logout"><input type="button" value="Log out"></a></td>
+</tr></table>
+<h2 align="center"><strong>{{ header }}</strong></h2>
+<img src = "static/download.jpg" height="200px" width="300px" alt="My Recipe Book" align="right">
+<br><br>
+<h3><font color="red"><strong>{{phrase}}</strong></font></h3>
+<br><br>
+<ul>
+    {% for item in item_list %}
+    <li>
+        <a href = {{item}}.html>   {{item}}  </a>
+    </li>
+    {% endfor %}
+</ul>
+<h3><font color="red"><strong><a href={{url_for('recipe')}}>Create Your Own Recipe here:-</a></strong></font></h3>
+<br>
+<table>
+    <tr>
+        <td><a href ="/login"> <input type="button"  value="Login" name="login"> </a></td>
+        <td><a href="/details"> <input type="button"  value="Register" name="register" ></a></td>
+    </tr>
+</table>
+{% endblock %}

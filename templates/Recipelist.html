@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{name}} : Your recipe List is here : </h2>
+<ul>
+    {% for item in item_list %}
+    <li><a href="{{url_for('foodrcp' , type=item[1] ) }}">{{item[0]}}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

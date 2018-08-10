@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h5 align="right"><a href='/Recipelist'>View Your Recipe Here:-</a></h5>
+<h2 align="left"> Welcome ! {{name}}</h2>
+
+<p> Create your Recipe Here :- </p>
+<form action="/SaveRcp" method="post">
+    <input type="text" name="rname" placeholder="Recipe name">
+    <br><br>
+    <textarea  name="recipe" placeholder="Enter the details here as prescribe
+Prep Time :
+Cook Time: IN minutes
+Total Time :
+Categories:
+
+Description
+My description
+
+Ingredients
+My ingredients
+
+Directions
+Steps
+
+Notes
+Comments"  rows="20" cols="100"></textarea>
+    <br><br>
+    <input type="submit" value="submit">
+</form>
+
+{% endblock %}

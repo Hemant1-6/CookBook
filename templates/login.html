@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<h2 align="center"> Login to My Cook Book</h2>
+
+<form action="/MyBook" method="post">
+ <table>
+     <tr>
+         <td> Enter your email id:</td>
+     <td> <input type="email" name="email" placeholder="email-id here"></td>
+     </tr>
+     <tr>
+         <td> Enter your password here: </td>
+         <td> <input type="password" name="password" placeholder="password here"> </td>
+     </tr>
+ </table>
+    <br><br><br>
+       <input type="submit" value="Submit">
+</form>
+
+<h2 align="right"><a href ="/"><input type="button" value="Back" height="70px" align="right"></a></h2>
+<br><br>
+<h3>{{error}}</h3>
+{% endblock %}

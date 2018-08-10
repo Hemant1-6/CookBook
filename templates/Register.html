@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2 align="center"><strong>Enter Your Details</strong></h2>
+
+<form method="POST" action="/register">
+ <table>
+     <tr><td>First Name : </td> <td width="40"> <input type="text" placeholder="Enter your  First name" name="Fname"> </td></tr>
+     <tr><td>Last Name : </td> <td width="40"> <input type="text" placeholder="Enter your  Last name" name="Lname"> </td></tr>
+     <tr><td>Email :     </td> <td width="40"> <input type="email" placeholder="Enter your email address" name="email"> </td></tr>
+     <tr><td>Password : </td> <td width="40"> <input type="password" placeholder="Enter your password" name="password"> </td></tr>
+     <tr><td>Confirm Password : </td> <td width="40"> <input type="password" placeholder="Enter password again" name="cnfrm"> </td></tr>
+ </table>
+    <br><br>
+    <p> <input type="submit" value="Submit"> </p>
+</form>
+<br><br><br>
+<p>{{title}}</p>
+
+{% endblock %}

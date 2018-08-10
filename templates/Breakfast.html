@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<img src="static/brkfst.jpg" align="right" alt="Breakfast Recipe" width="300px" height="200px">
+<h2 align="center"><strong>{{header}}</strong></h2>
+
+<br><br>
+<h3><strong><font color="red"> Click the food item whose Recipe you want to know </font> </strong> </h3>
+<table style="width:100%">
+    <tr>
+       <td><a href = "{{url_for('foodrcp' , type='static/Breakfast/sceg.txt')}}"><img src="static/Breakfast/Scegg.jpg" height="100px" width="130px" border="0px"/><br><span><strong>Scrambeld Egg</strong></span></a></td>
+       <td><a href = "{{url_for('foodrcp' , type='static/Breakfast/oatmeal.txt')}}"><img src="static/Breakfast/oatmeal.jpg" height="100px" width="120px" border="0px"/><br><span><strong>Oat Meal</strong></span></a></td>
+       <td><a href = "{{url_for('foodrcp' , type='static/Breakfast/bagels.txt')}}"><img src="static/Breakfast/bagels.jpg" height="100px" width="120px" border="0px"/><br><span><strong>Bagels</strong></span></a></td>
+    </tr>
+    <tr><td rowspan="1"></td><td rowspan="1"></td><td rowspan="1"></td></tr>
+    <tr>
+       <td><a href = "{{url_for('foodrcp' , type='static/Breakfast/bacon.txt')}}"><img src="static/Breakfast/bacon.jpg" height="100px" width="130px" border="0px"/><br><span><strong>Bacon</strong></span></a></td>
+       <td><a href = "{{url_for('foodrcp' , type='static/Breakfast/hash.txt')}}"><img src="static/Breakfast/hash.jpg" height="100px" width="120px" border="0px"/><br><span><strong>Hash Brown</strong></span></a></td>
+       <td><a href = "{{url_for('foodrcp' , type='static/Breakfast/patato.txt')}}"><img src="static/Breakfast/patato.jpg" height="100px" width="120px" border="0px"/><br><span><strong>Fried Potatoes</strong></span></a></td>
+    </tr>
+</table>
+<br><br>
+{% endblock %}
